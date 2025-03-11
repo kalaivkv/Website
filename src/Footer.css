@@ -1,0 +1,118 @@
+/* Footer Styling */
+.footer {
+    background: #f8f9fa;
+    padding: 40px 60px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Left Section - Logo & Description */
+.footer-brand {
+    max-width: 280px;
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #374151;
+}
+
+.footer-brand p {
+    margin: 10px 0;
+    color: #6c757d;
+}
+
+/* Updated Store Button Styling */
+.app-buttons {
+    display: flex;
+    flex-direction: column; /* Stacks buttons vertically */
+    gap: 10px;
+    align-items: flex-start; /* Aligns to the left */
+}
+
+@media (max-width: 768px) {
+    .app-buttons {
+        flex-direction:row;
+        align-items: center; /* Center on smaller screens */
+        padding-bottom: .6rem;
+    }
+}
+
+.store-btn {
+    width: 140px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.store-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Middle Sections - Links */
+.footer-links {
+    flex: 1;
+    min-width: 150px;
+}
+
+.footer-links h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #374151;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    color: #6c757d;
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+.footer-links ul li:hover {
+    text-decoration: underline;
+}
+
+/* Right Section - Contact Info */
+.footer-contact {
+    max-width: 250px;
+}
+
+.footer-contact h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #374151;
+}
+
+.footer-contact p {
+    color: #6c757d;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 5px 0;
+}
+
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-icons svg {
+    font-size: 20px;
+    cursor: pointer;
+    color: #374151;
+}
+
+.social-icons svg:hover {
+    color: #16a085;
+}
