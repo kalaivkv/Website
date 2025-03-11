@@ -5,12 +5,12 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Button, Container, Row, Col } from "react-bootstrap";
 import slide1 from "./assets/slide1.jpg";
-import slide2 from "./assets/slide2.jpg";
+import slide2 from "./Images/fruit.jpg";
 import "./HeroSlider.css"; // Custom CSS file
 
 const HeroSlider = () => {
   return (
-    <Container fluid className="px-0">
+    <Container  className="px-0">
       <Swiper
         modules={[Pagination, Autoplay]}
         spaceBetween={30}

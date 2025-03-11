@@ -4,7 +4,7 @@ import { FaPhone, FaWhatsapp } from "react-icons/fa";
 
 const Header2 = () => {
   return (
-    <div className="bg-light text-secondary py-2">
+    <div className="bg-light text-secondary ">
       <Container>
         <Row className="align-items-center text-center text-md-start">
           {/* Left Section - Contact Info */}

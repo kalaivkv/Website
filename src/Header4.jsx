@@ -8,7 +8,7 @@ const Header4 = () => {
       <Container>
         <Row className="align-items-center">
           {/* Left Side - Categories Dropdown */}
-          <Col xs={12} md={3} className="text-center text-md-start">
+          <Col xs={12} md={3} className="text-center text-md-start mb-2 mb-md-0">
             <Dropdown>
               <Dropdown.Toggle
                 className="w-100 d-flex align-items-center justify-content-center gap-2 border-0"
@@ -18,79 +18,42 @@ const Header4 = () => {
                 <span>All Categories</span>
               </Dropdown.Toggle>
               <Dropdown.Menu>
-                <Dropdown.Item href="#" className="text-decoration-none">Electronics</Dropdown.Item>
-                <Dropdown.Item href="#" className="text-decoration-none">Fashion</Dropdown.Item>
-                <Dropdown.Item href="#" className="text-decoration-none">Home & Furniture</Dropdown.Item>
+                <Dropdown.Item href="#">Electronics</Dropdown.Item>
+                <Dropdown.Item href="#">Fashion</Dropdown.Item>
+                <Dropdown.Item href="#">Home & Furniture</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
           </Col>
 
-          {/* Center Dropdowns */}
-          <Col xs={12} md={6} className="d-flex justify-content-center gap-3">
-            <Dropdown>
-              <Dropdown.Toggle variant="link" className="text-dark border-0 text-decoration-none">
-                Home
-              </Dropdown.Toggle>
-              <Dropdown.Menu>
-                <Dropdown.Item href="#" className="text-decoration-none">Home 1</Dropdown.Item>
-                <Dropdown.Item href="#" className="text-decoration-none">Home 2</Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
+          {/* Center - Navigation Dropdowns */}
+          <Col xs={12} md={6} className="d-flex flex-wrap justify-content-center gap-2 gap-md-3 text-center">
+            {["Home", "Categories", "Products", "Blog", "Pages"].map((title, index) => (
+              <Dropdown key={index}>
+                <Dropdown.Toggle variant="link" className="text-dark border-0 text-decoration-none p-1">
+                  {title}
+                </Dropdown.Toggle>
+                <Dropdown.Menu>
+                  <Dropdown.Item href="#">Option 1</Dropdown.Item>
+                  <Dropdown.Item href="#">Option 2</Dropdown.Item>
+                </Dropdown.Menu>
+              </Dropdown>
+            ))}
 
+            {/* Offers Dropdown */}
             <Dropdown>
-              <Dropdown.Toggle variant="link" className="text-dark border-0 text-decoration-none">
-                Categories
-              </Dropdown.Toggle>
-              <Dropdown.Menu>
-                <Dropdown.Item href="#" className="text-decoration-none">Men</Dropdown.Item>
-                <Dropdown.Item href="#" className="text-decoration-none">Women</Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
-
-            <Dropdown>
-              <Dropdown.Toggle variant="link" className="text-dark border-0 text-decoration-none">
-                Products
-              </Dropdown.Toggle>
-              <Dropdown.Menu>
-                <Dropdown.Item href="#" className="text-decoration-none">Best Sellers</Dropdown.Item>
-                <Dropdown.Item href="#" className="text-decoration-none">New Arrivals</Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
-
-            <Dropdown>
-              <Dropdown.Toggle variant="link" className="text-dark border-0 text-decoration-none">
-                Blog
-              </Dropdown.Toggle>
-              <Dropdown.Menu>
-                <Dropdown.Item href="#" className="text-decoration-none">Latest News</Dropdown.Item>
-                <Dropdown.Item href="#" className="text-decoration-none">Tips & Guides</Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
-
-            <Dropdown>
-              <Dropdown.Toggle variant="link" className="text-dark border-0 text-decoration-none">
-                Pages
-              </Dropdown.Toggle>
-              <Dropdown.Menu>
-                <Dropdown.Item href="#" className="text-decoration-none">About Us</Dropdown.Item>
-                <Dropdown.Item href="#" className="text-decoration-none">Contact</Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
-
-            <Dropdown>
-              <Dropdown.Toggle variant="link" className="text-dark border-0 text-decoration-none">
+              <Dropdown.Toggle variant="link" className="text-dark border-0 text-decoration-none p-1">
                 <FaBolt size={16} className="me-1" />
                 Offers
               </Dropdown.Toggle>
               <Dropdown.Menu>
-                <Dropdown.Item href="#" className="text-decoration-none">Discounts</Dropdown.Item>
-                <Dropdown.Item href="#" className="text-decoration-none">Clearance Sale</Dropdown.Item>
+                <Dropdown.Item href="#">Option 1</Dropdown.Item>
+                <Dropdown.Item href="#">Option 2</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
           </Col>
 
           {/* Right Side - Location Dropdown */}
-          <Col xs={12} md={3} className="text-center text-md-end">
+          <Col xs={12} md={3} className="text-center text-md-end mt-2 mt-md-0">
             <Dropdown>
               <Dropdown.Toggle
                 className="w-100 d-flex align-items-center justify-content-center gap-2 border-0"
@@ -100,9 +63,9 @@ const Header4 = () => {
                 <span>New York</span>
               </Dropdown.Toggle>
               <Dropdown.Menu>
-                <Dropdown.Item href="#" className="text-decoration-none">Los Angeles</Dropdown.Item>
-                <Dropdown.Item href="#" className="text-decoration-none">Chicago</Dropdown.Item>
-                <Dropdown.Item href="#" className="text-decoration-none">San Francisco</Dropdown.Item>
+                <Dropdown.Item href="#">Los Angeles</Dropdown.Item>
+                <Dropdown.Item href="#">Chicago</Dropdown.Item>
+                <Dropdown.Item href="#">San Francisco</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
           </Col>
