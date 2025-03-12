@@ -1,16 +1,19 @@
 import React, { useState, useEffect } from "react";
-import image from "./Images/image9.png"; 
-import { Button } from "@mui/material"; 
+import image from "./Images/image9.png";
+import { Button } from "@mui/material";
 
 const NewsletterPopup = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsOpen(true);
-    }, 1500);
+    // Check screen width and show popup only if screen width is greater than 768px
+    if (window.innerWidth > 768) {
+      const timer = setTimeout(() => {
+        setIsOpen(true);
+      }, 1500);
 
-    return () => clearTimeout(timer);
+      return () => clearTimeout(timer);
+    }
   }, []);
 
   return (
