@@ -8,19 +8,27 @@ import Slider2 from './Slider2'
 import Products from './Products'
 import Advertisement from './Advertisement'
 import Footer from './Footer'
+import HeaderContainer from './HeaderContainer'
+import NewsletterPopup from './NewsletterPopup'
+import Settings from './Settings'
+import TopList from './TopList'
 
 
 const App = () => {
   return (
     <div>
+      <NewsletterPopup/>
+      <Settings/>
       <Header1/>
       <Header2/>
       <Header3/>
       <Header4/>
-      <Slider/>
+{/*       <HeaderContainer/>*/} 
+     <Slider/>
       <Slider2/>
       <Products/>
       <Advertisement/>
+      <TopList/>
       <Footer/>
     </div>
   )

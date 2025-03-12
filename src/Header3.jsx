@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Form, InputGroup } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap-icons/font/bootstrap-icons.css"; // Import Bootstrap Icons
+import "bootstrap-icons/font/bootstrap-icons.css"; 
 
 const Header3 = () => {
   return (
@@ -9,7 +9,11 @@ const Header3 = () => {
       <Container>
         <Row className="align-items-center">
           {/* Logo */}
-          <Col xs={12} md={3} className="text-center text-md-start mb-2 mb-md-0">
+          <Col
+            xs={12}
+            md={3}
+            className="text-center text-md-start mb-2 mb-md-0"
+          >
             <img
               src="https://grabit-react-next.maraviyainfotech.com/assets/img/logo/logo.png"
               alt="Grabit Logo"
@@ -28,28 +32,36 @@ const Header3 = () => {
           </Col>
 
           {/* Icons Section */}
-          <Col xs={12} md={3} className="d-flex align-items-center justify-content-between justify-content-md-end text-center">
-  {/* Menu Icon (Visible Only on Small Screens) */}
-  <i className="bi bi-list menu-icon d-md-none"></i>
+          <Col
+            xs={12}
+            md={3}
+            className="d-flex align-items-center justify-content-between justify-content-md-end text-center"
+          >
+            {/* Menu Icon (Visible Only on Small Screens) */}
+            <i className="bi bi-list menu-icon d-md-none"></i>
 
-  {/* Icons Section */}
-  <div className="d-flex gap-3">
-    <div className="icon-container">
-      <i className="bi bi-person"></i> 
-      <span className="me-3">Account LOGIN</span>
-    </div>
+            {/* Icons Section */}
+            <div className="d-flex gap-3">
+              <div className="icon-container">
+                <i className="bi bi-person"></i>
+                <span className="me-3">Account LOGIN</span>
+              </div>
 
-    <div className="icon-container">
-      <i className="bi bi-heart"></i> 
-      <span className="me-3">Wishlist <strong>ITEMS</strong></span>
-    </div>
+              <div className="icon-container">
+                <i className="bi bi-heart"></i>
+                <span className="me-3">
+                  Wishlist <strong>ITEMS</strong>
+                </span>
+              </div>
 
-    <div className="icon-container">
-      <i className="bi bi-bag"></i> 
-      <span>Cart <strong>ITEMS</strong></span>
-    </div>
-  </div>
-</Col>
+              <div className="icon-container">
+                <i className="bi bi-bag"></i>
+                <span>
+                  Cart <strong>ITEMS</strong>
+                </span>
+              </div>
+            </div>
+          </Col>
         </Row>
       </Container>
 
@@ -86,8 +98,6 @@ const Header3 = () => {
       .icon-container span {
         display: none;
       }
-
-      
     }
         `}
       </style>

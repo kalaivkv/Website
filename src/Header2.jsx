@@ -11,7 +11,7 @@ const Header2 = () => {
       <Container>
         <Row className="align-items-center text-center text-md-start">
           {/* Left Section - Contact Info */}
-          <Col xs={12} md={4} className="mb-2 mb-md-0">
+          <Col xs={12} md={4} className="d-flex align-items-center justify-content-center justify-content-md-start gap-2">
             <FaPhone size={14} className="me-1" /> +91 987 654 3210
             <span className="mx-2">|</span>
             <FaWhatsapp size={14} className="me-1" /> +91 987 654 3210

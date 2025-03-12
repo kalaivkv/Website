@@ -8,7 +8,11 @@ const Header4 = () => {
       <Container>
         <Row className="align-items-center">
           {/* Left Side - Categories Dropdown */}
-          <Col xs={12} md={3} className="text-center text-md-start mb-2 mb-md-0">
+          <Col
+            xs={12}
+            md={3}
+            className="text-center text-md-start mb-2 mb-md-0"
+          >
             <Dropdown>
               <Dropdown.Toggle
                 className="w-100 d-flex align-items-center justify-content-center gap-2 border-0"
@@ -26,24 +30,36 @@ const Header4 = () => {
           </Col>
 
           {/* Center - Navigation Dropdowns */}
-          <Col xs={12} md={6} className="d-flex flex-wrap justify-content-center gap-2 gap-md-3 text-center">
-            {["Home", "Categories", "Products", "Blog", "Pages"].map((title, index) => (
-              <Dropdown key={index}>
-                <Dropdown.Toggle variant="link" className="text-dark border-0 text-decoration-none p-1">
-                  {title}
-                </Dropdown.Toggle>
-                <Dropdown.Menu>
-                  <Dropdown.Item href="#">Option 1</Dropdown.Item>
-                  <Dropdown.Item href="#">Option 2</Dropdown.Item>
-                </Dropdown.Menu>
-              </Dropdown>
-            ))}
+          <Col
+            xs={12}
+            md={6}
+            className="d-flex flex-wrap justify-content-center gap-2 gap-md-3 text-center"
+          >
+            {["Home", "Categories", "Products", "Blog", "Pages"].map(
+              (title, index) => (
+                <Dropdown key={index}>
+                  <Dropdown.Toggle
+                    variant="link"
+                    className="text-dark border-0 text-decoration-none p-1"
+                  >
+                    {title}
+                  </Dropdown.Toggle>
+                  <Dropdown.Menu>
+                    <Dropdown.Item href="#">Option 1</Dropdown.Item>
+                    <Dropdown.Item href="#">Option 2</Dropdown.Item>
+                  </Dropdown.Menu>
+                </Dropdown>
+              )
+            )}
 
             {/* Offers Dropdown */}
             <Dropdown>
-              <Dropdown.Toggle variant="link" className="text-dark border-0 text-decoration-none p-1">
+              <Dropdown.Toggle
+                variant="link"
+                className="d-flex align-items-center text-dark border-0 text-decoration-none p-1"
+              >
                 <FaBolt size={16} className="me-1" />
-                Offers
+                <span>Offers</span>
               </Dropdown.Toggle>
               <Dropdown.Menu>
                 <Dropdown.Item href="#">Option 1</Dropdown.Item>
