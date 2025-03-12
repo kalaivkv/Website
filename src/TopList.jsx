@@ -116,14 +116,14 @@ const TopList = () => {
               {section.items.map((item, idx) => (
                 <div
                   key={idx}
-                  className={`flex items-center justify-between border rounded-lg p-3 shadow-sm hover:shadow-md transition w-full h-28 gap-3 ${
-                    idx !== 0 ? "mt-6" : "" // Apply margin to all items except the first
+                  className={`flex items-center justify-between border rounded-lg p-3 shadow-sm hover:shadow-md transition w-full h-28 gap-2 ${
+                    idx !== 0 ? "mt-6" : "" 
                   }`}
                 >
                   <div className="flex flex-col gap-1 w-3/4">
-                    <h3 className="text-xs font-medium text-gray-800 truncate">
+                    <h5 className="text-xs font-medium text-gray-800 truncate">
                       {item.name}
-                    </h3>
+                    </h5>
                     <p className="text-[10px] text-gray-500">{item.category}</p>
                     <div className="flex gap-3">
                       <span className="text-sm font-bold">

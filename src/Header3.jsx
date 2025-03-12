@@ -50,14 +50,14 @@ const Header3 = () => {
               <div className="icon-container">
                 <i className="bi bi-heart"></i>
                 <span className="me-3">
-                  Wishlist <strong>ITEMS</strong>
+                  Wishlist ITEMS
                 </span>
               </div>
 
               <div className="icon-container">
                 <i className="bi bi-bag"></i>
                 <span>
-                  Cart <strong>ITEMS</strong>
+                  Cart ITEMS
                 </span>
               </div>
             </div>
