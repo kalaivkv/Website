@@ -1,10 +1,13 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { FaPhone, FaWhatsapp } from "react-icons/fa";
+import "./Header2.css";
+
 
 const Header2 = () => {
   return (
-    <div className="bg-light text-secondary ">
+    
+    <div className="bg-light text-secondary displaying">
       <Container>
         <Row className="align-items-center text-center text-md-start">
           {/* Left Section - Contact Info */}

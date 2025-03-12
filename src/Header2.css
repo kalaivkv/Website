@@ -1,0 +1,10 @@
+.displaying {
+     display: block;
+  }
+  
+@media (max-width: 768px) {
+    .displaying {
+        display: none;
+    }
+  }
+  

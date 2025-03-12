@@ -28,22 +28,28 @@ const Header3 = () => {
           </Col>
 
           {/* Icons Section */}
-          <Col xs={12} md={3} className="d-flex justify-content-md-end align-items-center text-center">
-            <div className="icon-container">
-              <i className="bi bi-person"></i> 
-              <span className="me-3">Account LOGIN</span>
-            </div>
+          <Col xs={12} md={3} className="d-flex align-items-center justify-content-between justify-content-md-end text-center">
+  {/* Menu Icon (Visible Only on Small Screens) */}
+  <i className="bi bi-list menu-icon d-md-none"></i>
 
-            <div className="icon-container">
-              <i className="bi bi-heart"></i> 
-              <span className="me-3">Wishlist <strong>ITEMS</strong></span>
-            </div>
+  {/* Icons Section */}
+  <div className="d-flex gap-3">
+    <div className="icon-container">
+      <i className="bi bi-person"></i> 
+      <span className="me-3">Account LOGIN</span>
+    </div>
 
-            <div className="icon-container">
-              <i className="bi bi-bag"></i> 
-              <span>Cart <strong>ITEMS</strong></span>
-            </div>
-          </Col>
+    <div className="icon-container">
+      <i className="bi bi-heart"></i> 
+      <span className="me-3">Wishlist <strong>ITEMS</strong></span>
+    </div>
+
+    <div className="icon-container">
+      <i className="bi bi-bag"></i> 
+      <span>Cart <strong>ITEMS</strong></span>
+    </div>
+  </div>
+</Col>
         </Row>
       </Container>
 
@@ -63,8 +69,26 @@ const Header3 = () => {
           }
 
           .icon-container:hover i {
-            color: rgb(79, 160, 120); /* Green on hover */
+            color: rgb(79, 160, 120); 
           }
+
+          .menu-icon {
+      font-size: 1.8rem;
+      cursor: pointer;
+      transition: color 0.3s ease-in-out;
+    }
+
+    .menu-icon:hover {
+      color: rgb(79, 160, 120);
+    }
+
+    @media (max-width: 768px) {
+      .icon-container span {
+        display: none;
+      }
+
+      
+    }
         `}
       </style>
     </header>
