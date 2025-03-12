@@ -25,7 +25,6 @@ const Footer = () => {
     <footer className="bg-gray-100 text-gray-700 py-4">
       <Container>
         <div className="flex flex-wrap justify-between gap-6">
-          {/* Left Section - Logo & Description */}
           <div className="w-full md:w-1/6">
             <img
               src="https://grabit-react-next.maraviyainfotech.com/assets/img/logo/logo.png"
@@ -50,7 +49,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Middle Sections - Categories, Company, Account */}
           <div className="w-full md:w-1/6">
             {isSmallScreen ? (
               <FooterAccordion title="Category">
@@ -138,7 +136,6 @@ const Footer = () => {
             )}
           </div>
 
-          {/* Right Section - Contact Info */}
           <div className="w-full md:w-1/6">
             {isSmallScreen ? (
               <FooterAccordion title="Contact">
@@ -157,7 +154,6 @@ const Footer = () => {
   );
 };
 
-// Accordion Component for Small Screens
 const FooterAccordion = ({ title, children }) => {
   return (
     <Accordion className="bg-transparent shadow-none">
@@ -171,7 +167,6 @@ const FooterAccordion = ({ title, children }) => {
   );
 };
 
-// Static Footer Section for Large Screens
 const StaticFooterSection = ({ title, items }) => (
   <div>
     <h3 className="text-lg font-semibold mb-2">{title}</h3>
@@ -187,7 +182,6 @@ const FooterLinks = ({ items }) => (
   </ul>
 );
 
-// Contact Details Component
 const ContactDetails = () => (
   <div>
     <p className="flex items-center gap-2 text-sm">
@@ -202,7 +196,6 @@ const ContactDetails = () => (
       <FaEnvelope className="text-green-400" style={{ fontSize: "20px" }}/> example@email.com
     </p>
 
-    {/* Social Icons */}
     <div className="flex gap-4 mt-3 text-lg">
   <div className="w-10 h-10 flex items-center justify-center bg-gray-600 text-white rounded-lg cursor-pointer hover:bg-blue-500 hover:text-white">
     <FaFacebookF />

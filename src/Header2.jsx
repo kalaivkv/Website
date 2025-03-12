@@ -10,19 +10,16 @@ const Header2 = () => {
     <div className="bg-light text-secondary displaying">
       <Container>
         <Row className="align-items-center text-center text-md-start">
-          {/* Left Section - Contact Info */}
           <Col xs={12} md={4} className="d-flex align-items-center justify-content-center justify-content-md-start gap-2">
             <FaPhone size={14} className="me-1" /> +91 987 654 3210
             <span className="mx-2">|</span>
             <FaWhatsapp size={14} className="me-1" /> +91 987 654 3210
           </Col>
 
-          {/* Center Section - Branding */}
           <Col xs={12} md={4} className="text-center mb-2 mb-md-0">
             World's Fastest Online Shopping Destination
           </Col>
 
-          {/* Right Section - Menu */}
           <Col xs={12} md={4} className="text-md-end">
             <span className="me-3">Help?</span>
             <span className="me-3">Track Order?</span>

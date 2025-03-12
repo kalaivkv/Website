@@ -28,7 +28,6 @@
     border-radius: 10px;
   }
   
-  /* Fade-in Effect */
   @keyframes fadeIn {
     0% {
       opacity: 0;

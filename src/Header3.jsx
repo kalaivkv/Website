@@ -8,7 +8,6 @@ const Header3 = () => {
     <header className="py-2 border-bottom bg-white">
       <Container>
         <Row className="align-items-center">
-          {/* Logo */}
           <Col
             xs={12}
             md={3}
@@ -21,7 +20,6 @@ const Header3 = () => {
             />
           </Col>
 
-          {/* Search Bar */}
           <Col xs={12} md={6}>
             <InputGroup>
               <Form.Control type="text" placeholder="Search Products..." />
@@ -31,16 +29,13 @@ const Header3 = () => {
             </InputGroup>
           </Col>
 
-          {/* Icons Section */}
           <Col
             xs={12}
             md={3}
             className="d-flex align-items-center justify-content-between justify-content-md-end text-center"
           >
-            {/* Menu Icon (Visible Only on Small Screens) */}
             <i className="bi bi-list menu-icon d-md-none"></i>
 
-            {/* Icons Section */}
             <div className="d-flex gap-3">
               <div className="icon-container">
                 <i className="bi bi-person"></i>
@@ -65,7 +60,6 @@ const Header3 = () => {
         </Row>
       </Container>
 
-      {/* Custom Styles */}
       <style>
         {`
           .icon-container {

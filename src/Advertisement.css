@@ -1,32 +1,32 @@
 .ad-container {
     position: relative;
     width: 100%;
-    height: 350px; /* Adjust as needed */
+    height: 350px; 
     overflow: hidden;
     border-radius: 10px;
     display: flex;
     align-items: center;
-    justify-content: flex-end; /* Moves text to the right */
-    padding-right: 40px; /* Adjust space from the right edge */
+    justify-content: flex-end;
+    padding-right: 40px; 
 }
 
 .ad-image {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the image fills the div without distortion */
+    object-fit: cover; 
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1; /* Sends the image to the background */
+    z-index: -1; 
 }
 
 .ad-content {
     position: relative;
-    text-align: right; /* Aligns text to the right */
+    text-align: right; 
     color: #333;
     padding: 20px;
     border-radius: 8px;
-    max-width: 40%; /* Restricts text width for better readability */
+    max-width: 40%; 
 }
 
 .ad-content h2 {

@@ -13,7 +13,6 @@ const Settings = () => {
 
   return (
     <>
-      {/* Settings Panel */}
       <motion.div
         initial={{ x: 200, opacity: 0 }}
         animate={{ x: open ? 0 : 200, opacity: open ? 1 : 0 }}
@@ -22,7 +21,6 @@ const Settings = () => {
           open ? "block" : "hidden"
         }`}
       >
-        {/* Rotating Settings Icon */}
         <div
           className="w-12 h-12 bg-gray-900 text-white flex items-center justify-center rounded-lg shadow-md cursor-pointer"
           onClick={() => setOpen(!open)}
@@ -32,11 +30,9 @@ const Settings = () => {
           </motion.div>
         </div>
 
-        {/* Tools Heading */}
         <h3 className="mt-5 text-lg font-semibold text-gray-800">Tools</h3>
         <hr className="w-full my-2 border-gray-300" />
 
-        {/* Select Color */}
         <h4 className="text-gray-700 font-medium">Select Color</h4>
         <div className="mt-2 flex flex-wrap gap-2">
           {colors.map((color, index) => (
@@ -53,7 +49,6 @@ const Settings = () => {
 
         
 
-        {/* Dark Mode Toggle */}
         <h4 className="mt-4 text-gray-700 font-medium">Dark Modes</h4>
         <div className="mt-2 flex gap-3 p-1">
           {["Light", "Dark"].map((mode) => (
@@ -71,7 +66,6 @@ const Settings = () => {
         </div>
       </motion.div>
 
-      {/* Floating Icon when Panel is Closed */}
       {!open && (
         <div
           className="fixed right-5 top-1/2 transform -translate-y-1/2 cursor-pointer z-50 bg-gray-500 w-12 h-12 flex items-center justify-center rounded-lg shadow-md"
