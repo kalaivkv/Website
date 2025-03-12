@@ -24,7 +24,7 @@ const App = () => {
       <Header2/>
       <Header3/>
       <Header4/> 
-      <HeaderContainer/>
+      
       <Slider/>
       <Slider2/>
       <Products/>
