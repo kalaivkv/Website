@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Row, Col, Button, Dropdown } from "react-bootstrap";
 import { FaThLarge, FaMapMarkerAlt, FaBolt } from "react-icons/fa";
 
-const Header4 = () => {
+const Header4 = ({selectedColor}) => {
   return (
     <Container fluid className="bg-light py-2 d-none d-md-block">
       <Container>
@@ -16,7 +16,7 @@ const Header4 = () => {
             <Dropdown>
               <Dropdown.Toggle
                 className="w-100 d-flex align-items-center justify-content-center gap-2 border-0"
-                style={{ backgroundColor: "rgb(79, 160, 120)", color: "white" }}
+                style={{ backgroundColor: selectedColor, color: "white" }}
               >
                 <FaThLarge size={18} />
                 <span>All Categories</span>
@@ -73,7 +73,7 @@ const Header4 = () => {
             <Dropdown>
               <Dropdown.Toggle
                 className="w-100 d-flex align-items-center justify-content-center gap-2 border-0"
-                style={{ backgroundColor: "rgb(79, 160, 120)", color: "white" }}
+                style={{ backgroundColor: selectedColor, color: "white" }}
               >
                 <FaMapMarkerAlt size={18} />
                 <span>New York</span>

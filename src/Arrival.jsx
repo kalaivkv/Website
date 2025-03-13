@@ -4,7 +4,7 @@ import productData from "./ProductData";
 
 const categories = ["ALL", "SNACK & SPICES", "FRUITS", "VEGETABLES"];
 
-const Arrival = () => {
+const Arrival = ({ selectedColor }) => {
   const [activeCategory, setActiveCategory] = useState("ALL");
   const [visibleCount, setVisibleCount] = useState(15); // Initially show 15 products
 
@@ -36,21 +36,25 @@ const Arrival = () => {
           {/* Category Tabs */}
           <div className="flex space-x-6 gap-3 mt-4 md:mt-0">
             {categories.map((category, index) => (
-              <Typography
-                key={index}
-                variant="body2"
-                className={`cursor-pointer transition duration-300 ${
-                  activeCategory === category
-                    ? "text-green-500 font-semibold border-b-2 border-green-500"
-                    : "text-gray-500 hover:text-green-500"
-                }`}
-                onClick={() => {
-                  setActiveCategory(category);
-                  setVisibleCount(15); // Reset count when category changes
-                }}
-              >
-                {category}
-              </Typography>
+             <Typography
+             key={index}
+             variant="body2"
+             style={{
+               color: activeCategory === category ? selectedColor : "#6b7280", 
+               borderBottom: activeCategory === category ? `2px solid ${selectedColor}` : "none",
+               cursor: "pointer", 
+               transition: "color 0.3s ease-in-out",
+             }}
+             onMouseEnter={(e) => (e.target.style.color = selectedColor)} 
+             onMouseLeave={(e) => (e.target.style.color = activeCategory === category ? selectedColor : "#6b7280")} 
+             onClick={() => {
+               setActiveCategory(category);
+               setVisibleCount(15); 
+             }}
+           >
+             {category}
+           </Typography>
+           
             ))}
           </div>
         </div>
@@ -111,7 +115,7 @@ const Arrival = () => {
           <div className="flex justify-center mt-4">
             <Button
               variant="contained"
-              color="success"
+              style={{ backgroundColor: selectedColor, color: "white" }}
               onClick={() => setVisibleCount(visibleCount + 15)}
             >
               Show More

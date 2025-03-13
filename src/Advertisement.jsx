@@ -2,7 +2,7 @@ import React from "react";
 import Button from "@mui/material/Button";
 import adImage from "./Images/Image9.jpg";
 
-const Advertisement = () => {
+const Advertisement = ({selectedColor}) => {
   return (
     <div className="container">
       <style>
@@ -45,7 +45,7 @@ const Advertisement = () => {
           {/* Button */}
           <Button
             variant="contained"
-            color="success"
+            style={{ backgroundColor: selectedColor, color: "white" }}
             sx={{
               mt: 2,
               px: 3,

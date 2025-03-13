@@ -20,10 +20,9 @@ const offers = [
   },
 ];
 
-const NewOffer = () => {
+const NewOffer = ({ selectedColor }) => {
   return (
     <>
-      {/* Internal CSS for Media Queries */}
       <style>
         {`
           @media (max-width: 640px) { /* Mobile */
@@ -76,7 +75,7 @@ const NewOffer = () => {
                 </p>
                 <Button
                   variant="contained"
-                  color="success"
+                  style={{ backgroundColor: selectedColor, color: "white" }}
                   className="offer-btn"
                 >
                   Shop Now

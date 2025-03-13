@@ -116,7 +116,7 @@ const TopList = () => {
               {section.items.map((item, idx) => (
                 <div
                   key={idx}
-                  className={`flex items-center justify-between border rounded-lg p-3 shadow-sm hover:shadow-md transition w-full h-28 gap-2 ${
+                  className={`flex items-center justify-between border rounded-lg p-3 shadow-sm hover:shadow-md transition w-full h-28 gap-1 ${
                     idx !== 0 ? "mt-6" : "" 
                   }`}
                 >

@@ -7,7 +7,7 @@ import { Button } from "@mui/material";
 import slide1 from "./assets/1.jpg";
 import slide2 from "./assets/2.jpg";
 
-const HeroSlider = () => {
+const HeroSlider = ({selectedColor}) => {
   return (
     <div className="container mx-auto">
       <style>
@@ -87,7 +87,7 @@ const HeroSlider = () => {
                 <p className="hero-text mt-2">Hurry! Limited stock available.</p>
                 <Button
                   variant="contained"
-                  color="success"
+                  style={{ backgroundColor: selectedColor, color: "white" }}
                   className="hero-btn mt-2"
                   sx={{ borderRadius: "999px", textTransform: "none" }}
                 >
@@ -115,7 +115,7 @@ const HeroSlider = () => {
                 <p className="hero-text hero-text1 mt-2">Hurry! Limited stock available.</p>
                 <Button
                   variant="contained"
-                  color="primary"
+                  style={{ backgroundColor: selectedColor, color: "white" }}
                   className="hero-btn mt-2"
                   sx={{ borderRadius: "999px", textTransform: "none" }}
                 >

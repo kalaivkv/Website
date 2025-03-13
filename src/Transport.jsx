@@ -2,13 +2,33 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const services = [
-  { id: 1, title: "Free Shipping", desc: "Free shipping on all US orders above $200", icon: "fa-truck" },
-  { id: 2, title: "24X7 Support", desc: "Contact us 24 hours a day, 7 days a week", icon: "fa-headset" },
-  { id: 3, title: "30 Days Return", desc: "Simply return it within 30 days for an exchange", icon: "fa-rotate-left" },
-  { id: 4, title: "Payment Secure", desc: "We ensure secure payment transactions", icon: "fa-shield-alt" },
+  {
+    id: 1,
+    title: "Free Shipping",
+    desc: "Free shipping on all US orders above $200",
+    icon: "fa-truck",
+  },
+  {
+    id: 2,
+    title: "24X7 Support",
+    desc: "Contact us 24 hours a day, 7 days a week",
+    icon: "fa-headset",
+  },
+  {
+    id: 3,
+    title: "30 Days Return",
+    desc: "Simply return it within 30 days for an exchange",
+    icon: "fa-rotate-left",
+  },
+  {
+    id: 4,
+    title: "Payment Secure",
+    desc: "We ensure secure payment transactions",
+    icon: "fa-shield-alt",
+  },
 ];
 
-const Transport = () => {
+const Transport = ({selectedColor}) => {
   return (
     <div className="container mx-auto px-4 py-12">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -21,8 +41,13 @@ const Transport = () => {
             viewport={{ once: true }}
             className="bg-white shadow-md rounded-lg p-4 flex flex-col items-center text-center border border-gray-200"
           >
-            <i className={`fas ${service.icon} text-4xl text-green-600 mb-4`}></i>
-            <h5 className="text-lg font-semibold text-gray-800">{service.title}</h5>
+            <i
+              className={`fas ${service.icon} text-4xl mb-4`}
+              style={{ color: selectedColor }} 
+            ></i>
+            <h5 className="text-lg font-semibold text-gray-800">
+              {service.title}
+            </h5>
             <p className="text-sm text-gray-500 mt-2 leading-snug text-center max-w-[180px]">
               {service.desc}
             </p>

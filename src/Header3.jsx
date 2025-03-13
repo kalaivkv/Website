@@ -4,7 +4,7 @@ import { FaHome, FaThLarge, FaShoppingBag, FaBlog, FaFileAlt, FaTags } from "rea
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
-const Header3 = () => {
+const Header3 = ({selectedColor}) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const menuItems = [
@@ -69,7 +69,14 @@ const Header3 = () => {
           <div className="menu-dropdowns">
             {menuItems.map((item, index) => (
               <Dropdown key={index} className="menu-item">
-                <Dropdown.Toggle className="menu-toggle">
+                <Dropdown.Toggle
+  className="menu-toggle"
+  style={{
+    backgroundColor: selectedColor, // Apply selected color dynamically
+    color: "white", // Ensure text remains visible
+    border: `1px solid ${selectedColor}`, // Optional: Set border color
+  }}
+>
                   {item.icon}
                   <span className="menu-text">{item.name}</span>
                 </Dropdown.Toggle>
