@@ -95,7 +95,7 @@ const Settings = () => {
             animate={{ rotate: 360 }}
             transition={{ repeat: Infinity, duration: 3, ease: "linear" }}
           >
-            <FiSettings size={30} className="text-white" />
+            <FiSettings size={24} className="text-white" />
           </motion.div>
         </div>
       )}

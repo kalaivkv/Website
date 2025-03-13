@@ -13,6 +13,8 @@ import NewsletterPopup from './NewsletterPopup';
 import Settings from './Settings';
 import TopList from './TopList';
 import Transport from './Transport';
+import Arrival from './Arrival';
+import NewOffer from './Newoffer';
 
 
 const App = () => {
@@ -23,12 +25,13 @@ const App = () => {
       <Header1/>
       <Header2/>
       <Header3/>
-      <Header4/> 
-      
+      <Header4/>  
       <Slider/>
       <Slider2/>
       <Products/>
       <Advertisement/>
+      <Arrival/>
+      <NewOffer/>
       <Transport/>
       <TopList/>
       <Footer/>
