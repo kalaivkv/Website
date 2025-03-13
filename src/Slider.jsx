@@ -9,7 +9,61 @@ import slide2 from "./assets/2.jpg";
 
 const HeroSlider = () => {
   return (
-    <div className="container">
+    <div className="container mx-auto">
+      <style>
+        {`
+          @media (max-width: 640px) { /* Small screens */
+            .hero-title { font-size: 1.2rem; } 
+            .hero-title1 { font-size: .7rem; } 
+            .hero-text { font-size: .9rem; } 
+            .hero-text1 { font-size: 0.6rem; } 
+            .hero-btn { font-size: 0.8rem; padding: 6px 12px; }
+          }
+          
+          @media (min-width: 641px) and (max-width: 1024px) { /* Tablets */
+            .hero-title { font-size: 2rem; } 
+            .hero-text { font-size: 1rem; } 
+            .hero-btn { font-size: 0.9rem; padding: 8px 16px; }
+          }
+          
+          @media (min-width: 1025px) { /* Large screens */
+            .hero-title { font-size: 2.5rem; } 
+            .hero-text { font-size: 1.2rem; } 
+            .hero-btn { font-size: 1rem; padding: 10px 20px; }
+          }
+
+
+          .hero-content { left: 20px; top: 47%; transform: translateY(-50%); } 
+
+          @media (min-width: 640px) { /* Small screens */
+            .hero-content { left: 30px; top: 70%; transform: translateY(-50%); } 
+          }
+
+          @media (min-width: 768px) { /* Tablets */
+            .hero-content { left: 80px; top: 75%; } 
+          }
+
+          @media (min-width: 1024px) { /* Large screens */
+            .hero-content { left: 50px; top: 50%; } 
+          }
+
+
+          .hero-content1 { left: 10px; top: 50%; transform: translateY(-50%); } 
+
+          @media (min-width: 640px) { /* Small screens */
+            .hero-content1 { left: 30px; top: 50%; transform: translateY(-50%); } 
+          }
+
+          @media (min-width: 768px) { /* Tablets */
+            .hero-content1 { left: 80px; top: 75%; } 
+          }
+
+          @media (min-width: 1024px) { /* Large screens */
+            .hero-content1 { left: 50px; top: 50%; } 
+          }
+        `}
+      </style>
+
       <div className="w-full">
         <Swiper
           modules={[Pagination, Autoplay]}
@@ -23,35 +77,24 @@ const HeroSlider = () => {
         >
           {/* Slide 1 */}
           <SwiperSlide>
-            <div className="relative w-full h-[450px] md:h-[550px] lg:h-[600px] flex items-center ps-5">
-              {/* Dark Overlay for Visibility */}
+            <div className="relative w-full h-[450px] md:h-[550px] lg:h-[600px] flex items-center justify-center">
               <div className="absolute inset-0 bg-black/60"></div>
 
-              {/* Text Section - Centered */}
-              <div className="absolute z-10 text-center text-black px-4">
-                <h2 className="text-3xl md:text-5xl font-bold">
+              <div className="absolute z-10 text-center  text-black hero-content ">
+                <h2 className="hero-title font-bold">
                   Explore Fresh & Juicy Fruits
                 </h2>
-                <p className="text-lg md:text-xl mt-2 text-gray-600">
-                  Hurry! Limited stock available.
-                </p>
+                <p className="hero-text mt-2">Hurry! Limited stock available.</p>
                 <Button
                   variant="contained"
                   color="success"
-                  sx={{
-                    mt: 2,
-                    px: 4,
-                    py: 1.5,
-                    fontSize: "1rem",
-                    borderRadius: "999px",
-                    textTransform: "none",
-                  }}
+                  className="hero-btn mt-2"
+                  sx={{ borderRadius: "999px", textTransform: "none" }}
                 >
                   Shop Now
                 </Button>
               </div>
 
-              {/* Full-Width Image */}
               <img
                 src={slide1}
                 alt="Fresh Fruits"
@@ -62,35 +105,24 @@ const HeroSlider = () => {
 
           {/* Slide 2 */}
           <SwiperSlide>
-            <div className="relative w-full h-[450px] md:h-[550px] lg:h-[600px] flex items-center ps-1">
-              {/* Dark Overlay */}
+            <div className="relative w-full h-[450px] md:h-[550px] lg:h-[600px] flex items-center justify-center">
               <div className="absolute inset-0 bg-black/60"></div>
 
-              {/* Centered Text Section */}
-              <div className="absolute z-10 text-center text-black px-4">
-                <h2 className="text-3xl md:text-5xl font-bold">
-                  Melt away your worries with a scoop!
+              <div className="absolute z-10 text-center text-black hero-content1 ">
+                <h2 className="hero-title hero-title1 font-bold">
+                  Melt away your worries <br /> with a scoop!
                 </h2>
-                <p className="text-lg md:text-xl mt-2 text-gray-600">
-                  Hurry! Limited stock available.
-                </p>
+                <p className="hero-text hero-text1 mt-2">Hurry! Limited stock available.</p>
                 <Button
                   variant="contained"
                   color="primary"
-                  sx={{
-                    mt: 2,
-                    px: 4,
-                    py: 1.5,
-                    fontSize: "1rem",
-                    borderRadius: "999px",
-                    textTransform: "none",
-                  }}
+                  className="hero-btn mt-2"
+                  sx={{ borderRadius: "999px", textTransform: "none" }}
                 >
                   Shop Now
                 </Button>
               </div>
 
-              {/* Full-Width Image */}
               <img
                 src={slide2}
                 alt="Ice Cream"
