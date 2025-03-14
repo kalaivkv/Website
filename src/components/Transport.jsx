@@ -28,7 +28,7 @@ const services = [
   },
 ];
 
-const Transport = ({selectedColor}) => {
+const Transport = ({ selectedColor, theme }) => {
   return (
     <div className="container mx-auto px-4 py-12">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -39,11 +39,15 @@ const Transport = ({selectedColor}) => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: index * 0.2 }}
             viewport={{ once: true }}
-            className="bg-white shadow-md rounded-lg p-4 flex flex-col items-center text-center border border-gray-200"
+            className={`shadow-md rounded-lg p-4 flex flex-col items-center text-center border ${
+              theme === "dark"
+                ? "bg-gray-800 border-gray-700 text-white"
+                : "bg-white border-gray-200 text-black"
+            }`}
           >
             <i
               className={`fas ${service.icon} text-4xl mb-4`}
-              style={{ color: selectedColor }} 
+              style={{ color: selectedColor }}
             ></i>
             <h5 className="text-lg font-semibold text-gray-800">
               {service.title}

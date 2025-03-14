@@ -39,48 +39,92 @@ const colors = [
   "#D32F2F",
   "#B71C1C",
 
-  "#B0C4D4", 
-  "#7D98AF", 
-  "#5B798E", 
-  "#3A5A70", 
+  "#B0C4D4",
+  "#7D98AF",
+  "#5B798E",
+  "#3A5A70",
 ];
 
-const Settings = ({ setSelectedColor, selectedColor }) => {
+const Settings = ({ setTheme, theme, setSelectedColor, selectedColor }) => {
   const [open, setOpen] = useState(false);
+
+  const toggleTheme = () => {
+    setTheme(theme === "light" ? "dark" : "light");
+  };
 
   return (
     <>
-     
       <motion.div
         initial={{ x: 200, opacity: 0 }}
         animate={{ x: open ? 0 : 200, opacity: open ? 1 : 0 }}
         transition={{ type: "spring", stiffness: 100, damping: 15 }}
-        className="fixed right-0 top-0 h-full w-64 bg-white shadow-lg flex flex-col p-5 rounded-l-xl border-l border-gray-300 z-[9999]"
+        className={`fixed right-0 top-0 h-full w-64 shadow-lg flex flex-col p-5 rounded-l-xl border-l z-[9999] ${
+          theme === "dark"
+            ? "bg-gray-900 border-gray-700 text-white"
+            : "bg-white border-gray-300 text-black"
+        }`}
       >
-        
         <div
-          className="absolute top-1/2 transform -translate-y-1/2 -left-12 bg-gray-600 text-white w-12 h-12 flex items-center justify-center rounded-lg shadow-md cursor-pointer border border-gray-600"
+          className="absolute top-1/2 transform -translate-y-1/2 -left-12 w-12 h-12 flex items-center justify-center rounded-lg shadow-md cursor-pointer border"
+          style={{
+            backgroundColor: theme === "dark" ? "#333" : "#e5e5e5",
+            borderColor: theme === "dark" ? "#555" : "#ddd",
+          }}
           onClick={() => setOpen(!open)}
         >
           <motion.div
             animate={{ rotate: 360 }}
             transition={{ repeat: Infinity, duration: 3, ease: "linear" }}
           >
-            <FiSettings size={24} />
+            <FiSettings size={24} color={theme === "dark" ? "#fff" : "#333"} />
           </motion.div>
         </div>
 
-        <h3 className="mt-5 text-lg font-semibold text-gray-800">Tools</h3>
-        <hr className="w-full my-2 border-gray-300" />
+        <h3 className="mt-5 text-lg font-semibold">Tools</h3>
+        <hr
+          className={`w-full my-2 ${
+            theme === "dark" ? "border-gray-700" : "border-gray-300"
+          }`}
+        />
 
-       
-        <h4 className="text-gray-700 font-medium">Select Color</h4>
+        <h4 className="font-medium mt-4">Theme Mode</h4>
+        <div className="mt-2 flex gap-2">
+          <button
+            className={`w-16 h-12 rounded-lg flex items-center justify-center border-2 ${
+              theme === "light"
+                ? "border-black text-black"
+                : "border-gray-400 text-gray-400"
+            }`}
+            onClick={() => setTheme("light")}
+          >
+            <div className="w-12 h-8 bg-gray-300 rounded-md flex items-center justify-center">
+              Light
+            </div>
+          </button>
+          <button
+            className={`w-16 h-12 rounded-lg flex items-center justify-center border-2 ${
+              theme === "dark"
+                ? "border-white text-white"
+                : "border-gray-500 text-gray-500"
+            }`}
+            onClick={() => setTheme("dark")}
+          >
+            <div className="w-12 h-8 bg-black rounded-md flex items-center justify-center">
+              Dark
+            </div>
+          </button>
+        </div>
+
+        <h4 className="font-medium mt-4">Select Color</h4>
         <div className="mt-2 flex flex-wrap gap-2">
           {colors.map((color, index) => (
             <div
               key={index}
-              className="w-8 h-8 rounded-md flex items-center justify-center cursor-pointer"
-              style={{ backgroundColor: color }}
+              className="w-8 h-8 rounded-md flex items-center justify-center cursor-pointer border"
+              style={{
+                backgroundColor: color,
+                borderColor: theme === "dark" ? "#fff" : "#ccc",
+              }}
               onClick={() => setSelectedColor(color)}
             >
               {selectedColor === color && <FaCheck className="text-white" />}
@@ -91,14 +135,18 @@ const Settings = ({ setSelectedColor, selectedColor }) => {
 
       {!open && (
         <div
-          className="fixed right-4 top-1/2 transform -translate-y-1/2 cursor-pointer z-[9999] bg-gray-600 w-12 h-12 flex items-center justify-center rounded-lg shadow-md border border-gray-600"
+          className="fixed right-4 top-1/2 transform -translate-y-1/2 cursor-pointer z-[9999] w-12 h-12 flex items-center justify-center rounded-lg shadow-md border"
+          style={{
+            backgroundColor: theme === "dark" ? "#333" : "#e5e5e5",
+            borderColor: theme === "dark" ? "#555" : "#ddd",
+          }}
           onClick={() => setOpen(true)}
         >
           <motion.div
             animate={{ rotate: 360 }}
             transition={{ repeat: Infinity, duration: 3, ease: "linear" }}
           >
-            <FiSettings size={24} className="text-white" />
+            <FiSettings size={24} color={theme === "dark" ? "#fff" : "#333"} />
           </motion.div>
         </div>
       )}

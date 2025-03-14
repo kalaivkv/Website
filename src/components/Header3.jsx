@@ -18,7 +18,7 @@ import {
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
-const Header3 = ({ selectedColor }) => {
+const Header3 = ({ selectedColor,theme }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef(null); 
   const menuItems = [
@@ -49,8 +49,11 @@ const Header3 = ({ selectedColor }) => {
   }, [menuOpen]);
 
   return (
-    <header className="py-2 border-bottom bg-white position-relative">
-      <Container>
+    <header
+    className={`py-2 border-b position-relative ${
+      theme === "dark" ? "bg-gray-800 text-white" : "bg-white text-gray-900"
+    }`}
+  >      <Container>
         <Row className="align-items-center">
           <Col xs={2} className="d-md-none text-start">
             <i className="bi bi-list menu-icon" onClick={() => setMenuOpen(true)}></i>

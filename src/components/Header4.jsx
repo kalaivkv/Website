@@ -2,11 +2,16 @@ import React from "react";
 import { Container, Row, Col, Button, Dropdown } from "react-bootstrap";
 import { FaThLarge, FaMapMarkerAlt, FaBolt } from "react-icons/fa";
 
-const Header4 = ({ selectedColor }) => {
+const Header4 = ({ selectedColor, theme }) => {
   return (
-    <Container fluid className="bg-light py-2 d-none d-md-block">
+    <Container
+      fluid
+      className={`py-2 d-none d-md-block ${
+        theme === "dark" ? "bg-gray-700 text-white" : "bg-light text-dark"
+      }`}
+    >
       <Container>
-        <Row className="align-items-center">
+        <Row className="align-items-center ">
           <Col
             xs={12}
             md={3}
@@ -37,7 +42,9 @@ const Header4 = ({ selectedColor }) => {
               <Dropdown key={index}>
                 <Dropdown.Toggle
                   variant="link"
-                  className="text-dark border-0 text-decoration-none p-1"
+                  className={`border-0 text-decoration-none p-1 ${
+                    theme === "dark" ? "text-white" : "text-dark"
+                  }`}
                 >
                   {title}
                 </Dropdown.Toggle>
@@ -53,7 +60,9 @@ const Header4 = ({ selectedColor }) => {
               <Dropdown key={index}>
                 <Dropdown.Toggle
                   variant="link"
-                  className="text-dark border-0 text-decoration-none p-1"
+                  className={`border-0 text-decoration-none p-1 ${
+                    theme === "dark" ? "text-white" : "text-dark"
+                  }`}
                 >
                   {title}
                 </Dropdown.Toggle>
@@ -69,7 +78,9 @@ const Header4 = ({ selectedColor }) => {
             <Dropdown>
               <Dropdown.Toggle
                 variant="link"
-                className="text-dark border-0 text-decoration-none p-1 d-flex align-items-center"
+                className={`border-0 text-decoration-none p-1 d-flex align-items-center ${
+                  theme === "dark" ? "text-white" : "text-dark"
+                }`}
               >
                 <FaBolt size={16} className="me-1" />
                 <span>Offers</span>

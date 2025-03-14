@@ -4,10 +4,14 @@ import { FaPhone, FaWhatsapp } from "react-icons/fa";
 import "./Header2.css";
 
 
-const Header2 = () => {
+const Header2 = ({theme}) => {
   return (
     
-    <div className="bg-light text-secondary displaying">
+    <div
+      className={`displaying p-4 text-center shadow-md ${
+        theme === "dark" ? "bg-gray-800 text-white" : "bg-gray-200 text-gray-900"
+      }`}
+    >
       <Container>
         <Row className="align-items-center text-center text-md-start">
           <Col xs={12} md={4} className="d-flex align-items-center justify-content-center justify-content-md-start gap-2">

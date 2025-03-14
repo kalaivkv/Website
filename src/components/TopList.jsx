@@ -91,33 +91,40 @@ const products = [
   },
 ];
 
-const TopList = () => {
+const TopList = ({ theme }) => {
   return (
     <div className="container mx-auto p-4">
       <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
         {products.map((section, index) => (
-          <div key={index} className="bg-white shadow-lg p-5 rounded-lg">
-         
+          <div
+            key={index}
+            className={`shadow-lg p-5 rounded-lg ${
+              theme === "dark"
+                ? "bg-gray-800 text-white"
+                : "bg-white text-black"
+            }`}
+          >
             <div className="flex justify-between items-center pb-4">
               <h2 className="text-base font-semibold">
-                {section.title.split(" ")[0]}{" "}
+                <span className="text-black">
+                  {section.title.split(" ")[0]}{" "}
+                </span>
                 <span className="text-green-600">
                   {section.title.split(" ")[1]}
                 </span>
               </h2>
-              <div className="flex gap-2 text-gray-500">
+              {/* <div className="flex gap-2 text-gray-500">
                 <FiChevronLeft className="cursor-pointer hover:text-gray-700" />
                 <FiChevronRight className="cursor-pointer hover:text-gray-700" />
-              </div>
+              </div> */}
             </div>
 
-           
             <div className="flex flex-col gap-6">
               {section.items.map((item, idx) => (
                 <div
                   key={idx}
                   className={`flex items-center justify-between border rounded-lg p-3 shadow-sm hover:shadow-md transition w-full h-28 gap-1 ${
-                    idx !== 0 ? "mt-6" : "" 
+                    idx !== 0 ? "mt-6" : ""
                   }`}
                 >
                   <div className="flex flex-col gap-1 w-3/4">

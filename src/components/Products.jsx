@@ -27,7 +27,6 @@ const products = [
     oldPrice: "$30.00",
     rating: 3,
     badge: "SALE",
-    
   },
   {
     id: 3,
@@ -57,11 +56,10 @@ const products = [
     oldPrice: "$50.00",
     rating: 1,
     badge: "NEW",
-   
   },
 ];
 
-const Products = () => {
+const Products = ({ theme }) => {
   const [timeLeft, setTimeLeft] = useState({
     days: 25,
     hours: 21,
@@ -93,6 +91,8 @@ const Products = () => {
     return () => clearInterval(interval);
   }, []);
 
+  const countdownColor = theme === "dark" ? "#4fa078" : "#ff6600";
+
   return (
     <div className="container">
       <div className="products-section">
@@ -103,7 +103,14 @@ const Products = () => {
             </h2>
             <p>Don’t wait. The time will never be just right.</p>
           </div>
-          <div className="countdown">
+          <div
+            className="countdown"
+            style={{
+              color: countdownColor,
+              fontWeight: "bold",
+              fontSize: "1.2rem",
+            }}
+          >
             {timeLeft.days} Days {timeLeft.hours} : {timeLeft.minutes} :{" "}
             {timeLeft.seconds}
           </div>
@@ -124,8 +131,8 @@ const Products = () => {
                   className="product-image"
                 />
                 <div className="icons">
-                   {/* <i className="bi bi-cart3 cart"></i>
-                  <i className="bi bi-chat-heart wishlist"></i> */} 
+                  {/* <i className="bi bi-cart3 cart"></i>
+                  <i className="bi bi-chat-heart wishlist"></i> */}
                 </div>
               </div>
               <p className="category">{product.category}</p>

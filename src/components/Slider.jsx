@@ -7,59 +7,27 @@ import { Button } from "@mui/material";
 import slide1 from "../assets/1.jpg";
 import slide2 from "../assets/2.jpg";
 
-const Slider = ({selectedColor}) => {
+const Slider = ({ selectedColor }) => {
   return (
     <div className="container mx-auto">
       <style>
         {`
           @media (max-width: 640px) { /* Small screens */
-            .hero-title { font-size: 1.2rem; } 
+            .hero-title { font-size: 1rem; } 
             .hero-title1 { font-size: .7rem; } 
             .hero-text { font-size: .9rem; } 
             .hero-text1 { font-size: 0.6rem; } 
             .hero-btn { font-size: 0.8rem; padding: 6px 12px; }
+            .hero-slide { height: 145px; }
+            .hero-image { object-fit: contain; width: 100%; height: 100%; }
           }
           
-          @media (min-width: 641px) and (max-width: 1024px) { /* Tablets */
+          @media (min-width: 641px) { /* Larger screens */
             .hero-title { font-size: 2rem; } 
             .hero-text { font-size: 1rem; } 
             .hero-btn { font-size: 0.9rem; padding: 8px 16px; }
-          }
-          
-          @media (min-width: 1025px) { /* Large screens */
-            .hero-title { font-size: 2.5rem; } 
-            .hero-text { font-size: 1.2rem; } 
-            .hero-btn { font-size: 1rem; padding: 10px 20px; }
-          }
-
-
-          .hero-content { left: 20px; top: 47%; transform: translateY(-50%); } 
-
-          @media (min-width: 640px) { /* Small screens */
-            .hero-content { left: 30px; top: 70%; transform: translateY(-50%); } 
-          }
-
-          @media (min-width: 768px) { /* Tablets */
-            .hero-content { left: 80px; top: 75%; } 
-          }
-
-          @media (min-width: 1024px) { /* Large screens */
-            .hero-content { left: 50px; top: 50%; } 
-          }
-
-
-          .hero-content1 { left: 10px; top: 50%; transform: translateY(-50%); } 
-
-          @media (min-width: 640px) { /* Small screens */
-            .hero-content1 { left: 30px; top: 50%; transform: translateY(-50%); } 
-          }
-
-          @media (min-width: 768px) { /* Tablets */
-            .hero-content1 { left: 80px; top: 75%; } 
-          }
-
-          @media (min-width: 1024px) { /* Large screens */
-            .hero-content1 { left: 50px; top: 50%; } 
+            .hero-slide { height: 500px; }
+            .hero-image { object-fit: cover; width: 100%; height: 100%; }
           }
         `}
       </style>
@@ -77,14 +45,15 @@ const Slider = ({selectedColor}) => {
         >
           {/* Slide 1 */}
           <SwiperSlide>
-            <div className="relative w-full h-[450px] md:h-[550px] lg:h-[600px] flex items-center justify-center">
-              <div className="absolute inset-0 bg-black/60"></div>
-
-              <div className="absolute z-10 text-center  text-black hero-content ">
+            <div className="relative w-full hero-slide flex items-center justify-center">
+              <div className="absolute inset-0 "></div>
+              <div className="absolute z-10 text-center text-black hero-content left-5 p-5 ">
                 <h2 className="hero-title font-bold">
                   Explore Fresh & Juicy Fruits
                 </h2>
-                <p className="hero-text mt-2">Hurry! Limited stock available.</p>
+                <p className="hero-text mt-2">
+                  Hurry! Limited stock available.
+                </p>
                 <Button
                   variant="contained"
                   style={{ backgroundColor: selectedColor, color: "white" }}
@@ -94,25 +63,25 @@ const Slider = ({selectedColor}) => {
                   Shop Now
                 </Button>
               </div>
-
               <img
                 src={slide1}
                 alt="Fresh Fruits"
-                className="absolute inset-0 w-full h-full object-cover"
+                className="absolute inset-0 hero-image"
               />
             </div>
           </SwiperSlide>
 
           {/* Slide 2 */}
           <SwiperSlide>
-            <div className="relative w-full h-[450px] md:h-[550px] lg:h-[600px] flex items-center justify-center">
-              <div className="absolute inset-0 bg-black/60"></div>
-
-              <div className="absolute z-10 text-center text-black hero-content1 ">
+            <div className="relative w-full hero-slide flex items-center justify-center">
+              <div className="absolute inset-0 "></div>
+              <div className="absolute z-10 text-center text-black hero-content1  left-5 p-5">
                 <h2 className="hero-title hero-title1 font-bold">
                   Melt away your worries <br /> with a scoop!
                 </h2>
-                <p className="hero-text hero-text1 mt-2">Hurry! Limited stock available.</p>
+                <p className="hero-text hero-text1 mt-2">
+                  Hurry! Limited stock available.
+                </p>
                 <Button
                   variant="contained"
                   style={{ backgroundColor: selectedColor, color: "white" }}
@@ -122,11 +91,10 @@ const Slider = ({selectedColor}) => {
                   Shop Now
                 </Button>
               </div>
-
               <img
                 src={slide2}
                 alt="Ice Cream"
-                className="absolute inset-0 w-full h-full object-cover"
+                className="absolute inset-0 hero-image"
               />
             </div>
           </SwiperSlide>

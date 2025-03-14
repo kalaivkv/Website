@@ -18,11 +18,17 @@ import {
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
-const Footer = () => {
+const Footer = ({ theme }) => {
   const isSmallScreen = useMediaQuery("(max-width: 768px)");
 
   return (
-    <footer className="bg-gray-100 text-gray-700 py-4">
+    <footer
+      className={`py-4 transition-all ${
+        theme === "dark"
+          ? "bg-gray-900 text-white"
+          : "bg-gray-100 text-gray-700"
+      }`}
+    >
       <Container>
         <div className="flex flex-wrap justify-between gap-6">
           <div className="w-full md:w-1/6">
@@ -139,12 +145,12 @@ const Footer = () => {
           <div className="w-full md:w-1/6">
             {isSmallScreen ? (
               <FooterAccordion title="Contact">
-                <ContactDetails />
+                <ContactDetails theme={theme} />
               </FooterAccordion>
             ) : (
               <div>
                 <h3 className="text-lg font-semibold mb-2">Contact</h3>
-                <ContactDetails />
+                <ContactDetails theme={theme} />
               </div>
             )}
           </div>
@@ -154,11 +160,11 @@ const Footer = () => {
   );
 };
 
-const FooterAccordion = ({ title, children }) => {
+const FooterAccordion = ({ title, children, color = "text-black" }) => {
   return (
     <Accordion className="bg-transparent shadow-none">
       <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-        <Typography className="font-semibold">{title}</Typography>
+        <Typography className={`font-semibold ${color}`}>{title}</Typography>
       </AccordionSummary>
       <AccordionDetails>
         <Typography component="div">{children}</Typography>

@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import Header1 from "./components/Header1";
+import React, { useState, useEffect } from "react";
 import Header2 from "./components/Header2";
 import Header3 from "./components/Header3";
 import Header4 from "./components/Header4";
@@ -17,24 +16,29 @@ import NewOffer from "./components/Newoffer";
 
 const App = () => {
   const [selectedColor, setSelectedColor] = useState("#4fa078");
+   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+
+   useEffect(() => {
+       document.documentElement.classList.toggle("dark", theme === "dark");
+       localStorage.setItem("theme", theme); 
+     }, [theme]);
 
   return (
-    <div>
+    <div className={`min-h-screen transition-all ${theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-black"}`} >
       <NewsletterPopup />
-      <Settings setSelectedColor={setSelectedColor} selectedColor={selectedColor} />
-      <Header1 />
-      <Header2 />
-      <Header3 selectedColor={selectedColor} />
-      <Header4 selectedColor={selectedColor} />
-      <Slider selectedColor={selectedColor} />
+      <Settings setSelectedColor={setSelectedColor} selectedColor={selectedColor} setTheme={setTheme} theme={theme}/>
+      <Header2 theme={theme}/>
+      <Header3 selectedColor={selectedColor} theme={theme} />
+      <Header4 selectedColor={selectedColor} theme={theme} />
+      <Slider selectedColor={selectedColor} theme={theme}/>
       <Slider2 selectedColor={selectedColor} />
-      <Products />
+      <Products theme={theme}/>
       <Advertisement selectedColor={selectedColor} />
       <Arrival selectedColor={selectedColor} />
       <NewOffer selectedColor={selectedColor} />
-      <Transport selectedColor={selectedColor} />
-      <TopList />
-      <Footer />
+      <Transport selectedColor={selectedColor} theme={theme} />
+      <TopList theme={theme} />
+      <Footer theme={theme} />
     </div>
   );
 };
