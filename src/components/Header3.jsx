@@ -1,31 +1,70 @@
 import React, { useState } from "react";
-import { Container, Row, Col, Form, InputGroup, Dropdown } from "react-bootstrap";
-import { FaHome, FaThLarge, FaShoppingBag, FaBlog, FaFileAlt, FaTags } from "react-icons/fa";
+import {
+  Container,
+  Row,
+  Col,
+  Form,
+  InputGroup,
+  Dropdown,
+} from "react-bootstrap";
+import {
+  FaHome,
+  FaThLarge,
+  FaShoppingBag,
+  FaBlog,
+  FaFileAlt,
+  FaTags,
+} from "react-icons/fa";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
-const Header3 = ({selectedColor}) => {
+const Header3 = ({ selectedColor }) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const menuItems = [
-    { name: "Home", icon: <FaHome size={18} />, options: ["Option 1", "Option 2"] },
-    { name: "Categories", icon: <FaThLarge size={18} />, options: ["Option 1", "Option 2"] },
-    { name: "Products", icon: <FaShoppingBag size={18} />, options: ["Option 1", "Option 2"] },
-    { name: "Blog", icon: <FaBlog size={18} />, options: ["Option 1", "Option 2"] },
-    { name: "Pages", icon: <FaFileAlt size={18} />, options: ["Option 1", "Option 2"] },
-    { name: "Offers", icon: <FaTags size={18} />, options: ["Option 1", "Option 2"] },
+    {
+      name: "Home",
+      icon: <FaHome size={18} />,
+      options: ["Grocery", "Fashion", "Fashion2"],
+    },
+    {
+      name: "Categories",
+      icon: <FaThLarge size={18} />,
+      options: ["Option 1", "Option 2"],
+    },
+    {
+      name: "Products",
+      icon: <FaShoppingBag size={18} />,
+      options: ["Option 1", "Option 2"],
+    },
+    {
+      name: "Blog",
+      icon: <FaBlog size={18} />,
+      options: ["Option 1", "Option 2"],
+    },
+    {
+      name: "Pages",
+      icon: <FaFileAlt size={18} />,
+      options: ["Option 1", "Option 2"],
+    },
+    {
+      name: "Offers",
+      icon: <FaTags size={18} />,
+      options: ["Option 1", "Option 2"],
+    },
   ];
 
   return (
     <header className="py-2 border-bottom bg-white position-relative">
       <Container>
         <Row className="align-items-center">
-          {/* Menu Icon (Left Side for Small Screens) */}
           <Col xs={2} className="d-md-none text-start">
-            <i className="bi bi-list menu-icon" onClick={() => setMenuOpen(true)}></i>
+            <i
+              className="bi bi-list menu-icon"
+              onClick={() => setMenuOpen(true)}
+            ></i>
           </Col>
 
-          {/* Logo (Center on Small Screens) */}
           <Col xs={8} md={3} className="text-center text-md-start mb-2 mb-md-0">
             <img
               src="https://grabit-react-next.maraviyainfotech.com/assets/img/logo/logo.png"
@@ -34,7 +73,6 @@ const Header3 = ({selectedColor}) => {
             />
           </Col>
 
-          {/* Search Bar */}
           <Col xs={12} md={6} className="d-none d-md-block">
             <InputGroup>
               <Form.Control type="text" placeholder="Search Products..." />
@@ -44,8 +82,11 @@ const Header3 = ({selectedColor}) => {
             </InputGroup>
           </Col>
 
-          {/* Icons (Right Side for Small Screens) */}
-          <Col xs={2} md={3} className="d-flex align-items-center justify-content-end">
+          <Col
+            xs={2}
+            md={3}
+            className="d-flex align-items-center justify-content-end"
+          >
             <div className="d-flex gap-3">
               <div className="icon-container">
                 <i className="bi bi-person"></i>
@@ -61,28 +102,32 @@ const Header3 = ({selectedColor}) => {
         </Row>
       </Container>
 
-      {/* Full-Screen Menu with Dropdowns */}
       <div className={`full-screen-menu ${menuOpen ? "open" : ""}`}>
         <div className="menu-content">
-          <i className="bi bi-x close-icon" onClick={() => setMenuOpen(false)}></i>
+          <i
+            className="bi bi-x close-icon"
+            onClick={() => setMenuOpen(false)}
+          ></i>
           <h2 className="menu-title">Explore</h2>
           <div className="menu-dropdowns">
             {menuItems.map((item, index) => (
               <Dropdown key={index} className="menu-item">
                 <Dropdown.Toggle
-  className="menu-toggle"
-  style={{
-    backgroundColor: selectedColor, // Apply selected color dynamically
-    color: "white", // Ensure text remains visible
-    border: `1px solid ${selectedColor}`, // Optional: Set border color
-  }}
->
+                  className="menu-toggle"
+                  style={{
+                    backgroundColor: selectedColor,
+                    color: "white",
+                    border: `1px solid ${selectedColor}`,
+                  }}
+                >
                   {item.icon}
                   <span className="menu-text">{item.name}</span>
                 </Dropdown.Toggle>
                 <Dropdown.Menu className="dropdown-menu-custom">
                   {item.options.map((option, i) => (
-                    <Dropdown.Item key={i} href="#">{option}</Dropdown.Item>
+                    <Dropdown.Item key={i} href="#">
+                      {option}
+                    </Dropdown.Item>
                   ))}
                 </Dropdown.Menu>
               </Dropdown>

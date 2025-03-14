@@ -4,8 +4,8 @@ import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Button } from "@mui/material";
-import slide1 from "./assets/1.jpg";
-import slide2 from "./assets/2.jpg";
+import slide1 from "../assets/1.jpg";
+import slide2 from "../assets/2.jpg";
 
 const HeroSlider = ({selectedColor}) => {
   return (

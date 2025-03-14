@@ -185,32 +185,35 @@ const FooterLinks = ({ items }) => (
 const ContactDetails = () => (
   <div>
     <p className="flex items-center gap-2 text-sm">
-    <FaMapMarkerAlt className="text-green-400"   style={{ fontSize: window.innerWidth >= 768 ? "28px" : "20px" }}  />
-
-    2548 Broaddus Maple Court, Madisonville KY 4783, USA.
+      <FaMapMarkerAlt
+        className="text-green-400"
+        style={{ fontSize: window.innerWidth >= 768 ? "28px" : "20px" }}
+      />
+      2548 Broaddus Maple Court, Madisonville KY 4783, USA.
     </p>
     <p className="flex items-center gap-2 text-sm">
-      <FaWhatsapp className="text-green-400" style={{ fontSize: "20px" }}/> +00 9876543210
+      <FaWhatsapp className="text-green-400" style={{ fontSize: "20px" }} /> +00
+      9876543210
     </p>
     <p className="flex items-center gap-2 text-sm">
-      <FaEnvelope className="text-green-400" style={{ fontSize: "20px" }}/> example@email.com
+      <FaEnvelope className="text-green-400" style={{ fontSize: "20px" }} />{" "}
+      example@email.com
     </p>
 
     <div className="flex gap-4 mt-3 text-lg">
-  <div className="w-10 h-10 flex items-center justify-center bg-gray-600 text-white rounded-lg cursor-pointer hover:bg-blue-500 hover:text-white">
-    <FaFacebookF />
-  </div>
-  <div className="w-10 h-10 flex items-center justify-center bg-gray-600 text-white rounded-lg cursor-pointer hover:bg-blue-400 hover:text-white">
-    <FaTwitter />
-  </div>
-  <div className="w-10 h-10 flex items-center justify-center bg-gray-600 text-white rounded-lg cursor-pointer hover:bg-blue-600 hover:text-white">
-    <FaLinkedinIn />
-  </div>
-  <div className="w-10 h-10 flex items-center justify-center bg-gray-600 text-white rounded-lg cursor-pointer hover:bg-pink-500 hover:text-white">
-    <FaInstagram />
-  </div>
-</div>
-
+      <div className="w-10 h-10 flex items-center justify-center bg-gray-600 text-white rounded-lg cursor-pointer hover:bg-blue-500 hover:text-white">
+        <FaFacebookF />
+      </div>
+      <div className="w-10 h-10 flex items-center justify-center bg-gray-600 text-white rounded-lg cursor-pointer hover:bg-blue-400 hover:text-white">
+        <FaTwitter />
+      </div>
+      <div className="w-10 h-10 flex items-center justify-center bg-gray-600 text-white rounded-lg cursor-pointer hover:bg-blue-600 hover:text-white">
+        <FaLinkedinIn />
+      </div>
+      <div className="w-10 h-10 flex items-center justify-center bg-gray-600 text-white rounded-lg cursor-pointer hover:bg-pink-500 hover:text-white">
+        <FaInstagram />
+      </div>
+    </div>
   </div>
 );
 

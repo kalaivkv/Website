@@ -2,12 +2,11 @@ import React from "react";
 import { Container, Row, Col, Button, Dropdown } from "react-bootstrap";
 import { FaThLarge, FaMapMarkerAlt, FaBolt } from "react-icons/fa";
 
-const Header4 = ({selectedColor}) => {
+const Header4 = ({ selectedColor }) => {
   return (
     <Container fluid className="bg-light py-2 d-none d-md-block">
       <Container>
         <Row className="align-items-center">
-          {/* Left Side - Categories Dropdown */}
           <Col
             xs={12}
             md={3}
@@ -29,30 +28,44 @@ const Header4 = ({selectedColor}) => {
             </Dropdown>
           </Col>
 
-          {/* Center - Navigation Dropdowns */}
           <Col
             xs={12}
             md={6}
             className="d-flex flex-wrap justify-content-center gap-2 gap-md-3 text-center"
           >
-            {["Home", "Categories", "Products", "Blog", "Pages"].map(
-              (title, index) => (
-                <Dropdown key={index}>
-                  <Dropdown.Toggle
-                    variant="link"
-                    className="text-dark border-0 text-decoration-none p-1"
-                  >
-                    {title}
-                  </Dropdown.Toggle>
-                  <Dropdown.Menu>
-                    <Dropdown.Item href="#">Option 1</Dropdown.Item>
-                    <Dropdown.Item href="#">Option 2</Dropdown.Item>
-                  </Dropdown.Menu>
-                </Dropdown>
-              )
-            )}
+            {["Home"].map((title, index) => (
+              <Dropdown key={index}>
+                <Dropdown.Toggle
+                  variant="link"
+                  className="text-dark border-0 text-decoration-none p-1"
+                >
+                  {title}
+                </Dropdown.Toggle>
+                <Dropdown.Menu>
+                  <Dropdown.Item href="#">Grocery</Dropdown.Item>
+                  <Dropdown.Item href="#">Fashion1</Dropdown.Item>
+                  <Dropdown.Item href="#">Fashion2</Dropdown.Item>
+                </Dropdown.Menu>
+              </Dropdown>
+            ))}
 
-            {/* Offers Dropdown */}
+            {["Categories", "Products", "Blog", "Pages"].map((title, index) => (
+              <Dropdown key={index}>
+                <Dropdown.Toggle
+                  variant="link"
+                  className="text-dark border-0 text-decoration-none p-1"
+                >
+                  {title}
+                </Dropdown.Toggle>
+                <Dropdown.Menu>
+                  <Dropdown.Item href="#">Classic</Dropdown.Item>
+                  <Dropdown.Item href="#">Banner</Dropdown.Item>
+                  <Dropdown.Item href="#">Column</Dropdown.Item>
+                  <Dropdown.Item href="#">List</Dropdown.Item>
+                </Dropdown.Menu>
+              </Dropdown>
+            ))}
+
             <Dropdown>
               <Dropdown.Toggle
                 variant="link"
@@ -68,7 +81,6 @@ const Header4 = ({selectedColor}) => {
             </Dropdown>
           </Col>
 
-          {/* Right Side - Location Dropdown */}
           <Col xs={12} md={3} className="text-center text-md-end mt-2 mt-md-0">
             <Dropdown>
               <Dropdown.Toggle

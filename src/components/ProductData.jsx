@@ -1,35 +1,35 @@
-import s1 from "./assets/Snacks/s1.jpg";
-import s2 from "./assets/Snacks/s2.jpg";
-import s3 from "./assets/Snacks/s3.jpg";
-import s4 from "./assets/Snacks/s4.jpg";
-import s5 from "./assets/Snacks/s5.jpg";
-import s6 from "./assets/Snacks/s6.jpg";
-import s7 from "./assets/Snacks/s7.jpg";
-import s8 from "./assets/Snacks/s8.jpg";
-import s9 from "./assets/Snacks/s9.jpg";
-import s10 from "./assets/Snacks/s10.jpg";
+import s1 from "../assets/Snacks/s1.jpg";
+import s2 from "../assets/Snacks/s2.jpg";
+import s3 from "../assets/Snacks/s3.jpg";
+import s4 from "../assets/Snacks/s4.jpg";
+import s5 from "../assets/Snacks/s5.jpg";
+import s6 from "../assets/Snacks/s6.jpg";
+import s7 from "../assets/Snacks/s7.jpg";
+import s8 from "../assets/Snacks/s8.jpg";
+import s9 from "../assets/Snacks/s9.jpg";
+import s10 from "../assets/Snacks/s10.jpg";
 
-import f1 from "./assets/Fruits/f1.jpg";
-import f2 from "./assets/Fruits/f2.jpg";
-import f3 from "./assets/Fruits/f3.jpg";
-import f4 from "./assets/Fruits/f4.jpg";
-import f5 from "./assets/Fruits/f5.jpg";
-import f6 from "./assets/Fruits/f6.jpg";
-import f7 from "./assets/Fruits/f7.jpg";
-import f8 from "./assets/Fruits/f8.jpg";
-import f9 from "./assets/Fruits/f9.jpg";
-import f10 from "./assets/Fruits/f10.jpg";
+import f1 from "../assets/Fruits/f1.jpg";
+import f2 from "../assets/Fruits/f2.jpg";
+import f3 from "../assets/Fruits/f3.jpg";
+import f4 from "../assets/Fruits/f4.jpg";
+import f5 from "../assets/Fruits/f5.jpg";
+import f6 from "../assets/Fruits/f6.jpg";
+import f7 from "../assets/Fruits/f7.jpg";
+import f8 from "../assets/Fruits/f8.jpg";
+import f9 from "../assets/Fruits/f9.jpg";
+import f10 from "../assets/Fruits/f10.jpg";
 
-import v1 from "./assets/Vegetables/v1.jpg";
-import v2 from "./assets/Vegetables/v2.jpg";
-import v3 from "./assets/Vegetables/v3.jpg";
-import v4 from "./assets/Vegetables/v4.jpg";
-import v5 from "./assets/Vegetables/v5.jpg";
-import v6 from "./assets/Vegetables/v6.jpg";
-import v7 from "./assets/Vegetables/v7.jpg";
-import v8 from "./assets/Vegetables/v8.jpg";
-import v9 from "./assets/Vegetables/v9.jpg";
-import v10 from "./assets/Vegetables/v10.jpg";
+import v1 from "../assets/Vegetables/v1.jpg";
+import v2 from "../assets/Vegetables/v2.jpg";
+import v3 from "../assets/Vegetables/v3.jpg";
+import v4 from "../assets/Vegetables/v4.jpg";
+import v5 from "../assets/Vegetables/v5.jpg";
+import v6 from "../assets/Vegetables/v6.jpg";
+import v7 from "../assets/Vegetables/v7.jpg";
+import v8 from "../assets/Vegetables/v8.jpg";
+import v9 from "../assets/Vegetables/v9.jpg";
+import v10 from "../assets/Vegetables/v10.jpg";
 
 
 
@@ -62,7 +62,7 @@ const productData = [
    
   
     // 10 Vegetables Products 
-    { name: "Tomato - Hybrid", category: "VEGETABLES", image: v1, price: 170.0, oldPrice: 195.0, rating: 3, sale: false, newArrival: false },
+  { name: "Tomato - Hybrid", category: "VEGETABLES", image: v1, price: 170.0, oldPrice: 195.0, rating: 3, sale: false, newArrival: false },
   { name: "Potato", category: "VEGETABLES", image: v2, price: 15.0, oldPrice: 20.0, rating: 5, sale: false, newArrival: true },
   { name: "Onion - Hybrid", category: "VEGETABLES", image: v3, price: 30.0, oldPrice: 45.0, rating: 3, sale: false, newArrival: false },
   { name: "Coriander Bunch", category: "VEGETABLES", image: v4, price: 7.0, oldPrice: 10.0, rating: 4, sale: false, newArrival: true },

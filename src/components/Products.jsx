@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "./Products.css";
-import nutsImg from "./Images/Image1.jpg";
-import cookiesImg from "./Images/Image2.jpg";
-import mangoJuiceImg from "./Images/1.jpg";
-import datesImg from "./Images/Image3.jpg";
-import stickFiberImg from "./Images/Image4.jpg";
+import nutsImg from "../Images/Image1.jpg";
+import cookiesImg from "../Images/Image2.jpg";
+import mangoJuiceImg from "../Images/1.jpg";
+import datesImg from "../Images/Image3.jpg";
+import stickFiberImg from "../Images/Image4.jpg";
 import { FiShoppingCart, FiHeart } from "react-icons/fi";
 
 const products = [
@@ -124,8 +124,8 @@ const Products = () => {
                   className="product-image"
                 />
                 <div className="icons">
-                  {/* <i className="bi bi-cart3 cart"></i>
-                  <i className="bi bi-chat-heart wishlist"></i> */}
+                   {/* <i className="bi bi-cart3 cart"></i>
+                  <i className="bi bi-chat-heart wishlist"></i> */} 
                 </div>
               </div>
               <p className="category">{product.category}</p>

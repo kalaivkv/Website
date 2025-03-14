@@ -12,7 +12,7 @@ import {
   LocalPizza,
 } from "@mui/icons-material";
 
-// Category Data
+
 const categories = [
   {
     id: 1,
@@ -83,7 +83,7 @@ const Slider2 = ({selectedColor}) => {
               )}
               <div
                 className="mb-3 text-4xl flex justify-center"
-                style={{ color: selectedColor }} // Apply the selected color
+                style={{ color: selectedColor }} 
               >
                 {category.icon}
               </div>{" "}

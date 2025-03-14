@@ -1,14 +1,14 @@
 import React from "react";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
-import lemon from "./Images/s1.jpg";
-import ginger from "./Images/s2.jpg";
-import mango from "./Images/s3.jpg";
-import dates from "./Images/s4.jpg";
-import nuts from "./Images/s5.jpg";
-import blueberry from "./Images/s6.jpg";
-import nutmix from "./Images/s7.jpg";
-import tomato from "./Images/s8.jpg";
-import coffee from "./Images/s9.jpg";
+import lemon from "../Images/s1.jpg";
+import ginger from "../Images/s2.jpg";
+import mango from "../Images/s3.jpg";
+import dates from "../Images/s4.jpg";
+import nuts from "../Images/s5.jpg";
+import blueberry from "../Images/s6.jpg";
+import nutmix from "../Images/s7.jpg";
+import tomato from "../Images/s8.jpg";
+import coffee from "../Images/s9.jpg";
 
 const products = [
   {
@@ -97,7 +97,7 @@ const TopList = () => {
       <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
         {products.map((section, index) => (
           <div key={index} className="bg-white shadow-lg p-5 rounded-lg">
-            {/* Section Title */}
+         
             <div className="flex justify-between items-center pb-4">
               <h2 className="text-base font-semibold">
                 {section.title.split(" ")[0]}{" "}
@@ -111,7 +111,7 @@ const TopList = () => {
               </div>
             </div>
 
-            {/* Product List */}
+           
             <div className="flex flex-col gap-6">
               {section.items.map((item, idx) => (
                 <div

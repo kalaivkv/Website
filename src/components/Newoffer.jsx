@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "@mui/material";
-import image1 from "./assets/new1.jpg"; // Update with correct paths
-import image2 from "./assets/new2.jpg"; // Update with correct paths
+import image1 from "../assets/new1.jpg"; 
+import image2 from "../assets/new2.jpg"; 
 
 const offers = [
   {
@@ -52,14 +52,12 @@ const NewOffer = ({ selectedColor }) => {
               key={offer.id}
               className="relative rounded-lg overflow-hidden group  cursor-pointer"
             >
-              {/* Image */}
               <img
                 src={offer.image}
                 alt={offer.title}
                 className="w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-105 "
               />
 
-              {/* Overlay */}
               <div className="absolute inset-0 p-3">
                 <span className="bg-gray-700 text-white text-xs px-2 py-1 rounded mb-2">
                   {offer.discount}
