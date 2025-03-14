@@ -7,7 +7,7 @@ import { Button } from "@mui/material";
 import slide1 from "../assets/1.jpg";
 import slide2 from "../assets/2.jpg";
 
-const HeroSlider = ({selectedColor}) => {
+const Slider = ({selectedColor}) => {
   return (
     <div className="container mx-auto">
       <style>
@@ -136,4 +136,4 @@ const HeroSlider = ({selectedColor}) => {
   );
 };
 
-export default HeroSlider;
+export default Slider;
