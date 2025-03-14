@@ -1,7 +1,8 @@
 import React from "react";
 import { Button } from "@mui/material";
-import image1 from "../assets/new1.jpg"; 
-import image2 from "../assets/new2.jpg"; 
+import { motion } from "framer-motion";
+import image1 from "../assets/new1.jpg";
+import image2 from "../assets/new2.jpg";
 
 const offers = [
   {
@@ -10,17 +11,21 @@ const offers = [
     discount: "70% Off",
     title: "Tasty Snack & Fastfood",
     description: "The Flavor Of Something Special",
+    animation: { x: -100, opacity: 0 },
   },
   {
     id: 2,
     image: image2,
     discount: "50% Off",
     title: "Fresh Fruits & Veggies",
-    description: "A Healthy Meal For Every One",
+    description: "A Healthy Meal For Everyone",
+    animation: { x: 100, opacity: 0 },
   },
 ];
 
 const NewOffer = ({ selectedColor }) => {
+  const isLargeScreen = window.innerWidth >= 1025;
+
   return (
     <>
       <style>
@@ -45,17 +50,21 @@ const NewOffer = ({ selectedColor }) => {
         `}
       </style>
 
-      <div className="container mx-auto p-6">
+      <div className="container mx-auto p-6 overflow-hidden">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {offers.map((offer) => (
-            <div
+            <motion.div
               key={offer.id}
-              className="relative rounded-lg overflow-hidden group  cursor-pointer"
+              initial={isLargeScreen ? offer.animation : { x: 0, opacity: 1 }}
+              whileInView={isLargeScreen ? { x: 0, opacity: 1 } : {}}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="relative rounded-lg overflow-hidden group cursor-pointer"
             >
               <img
                 src={offer.image}
                 alt={offer.title}
-                className="w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-105 "
+                className="w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
               />
 
               <div className="absolute inset-0 p-3">
@@ -79,7 +88,7 @@ const NewOffer = ({ selectedColor }) => {
                   Shop Now
                 </Button>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
