@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import image from "../Images/image9.png";
+import image from "../Images/Orange.png";
 import { Button } from "@mui/material";
 
 const NewsletterPopup = () => {
