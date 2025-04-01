@@ -99,7 +99,7 @@ const Header4 = ({ selectedColor, theme }) => {
                 style={{ backgroundColor: selectedColor, color: "white" }}
               >
                 <FaMapMarkerAlt size={18} />
-                <span>New York</span>
+                <span>Location</span>
               </Dropdown.Toggle>
               <Dropdown.Menu>
                 <Dropdown.Item href="#">Los Angeles</Dropdown.Item>

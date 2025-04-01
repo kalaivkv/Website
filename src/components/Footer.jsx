@@ -33,7 +33,7 @@ const Footer = ({ theme }) => {
         <div className="flex flex-wrap justify-between gap-6">
           <div className="w-full md:w-1/6">
             <img
-              src="https://grabit-react-next.maraviyainfotech.com/assets/img/logo/logo.png"
+              src="https://www.taizo.in/assets/img/New%20header-logo.svg"
               alt="Grabit Logo"
               className="h-10 mb-3"
             />
@@ -195,10 +195,10 @@ const ContactDetails = () => (
         className="text-green-400"
         style={{ fontSize: window.innerWidth >= 768 ? "28px" : "20px" }}
       />
-      2548 Broaddus Maple Court, Madisonville KY 4783, USA.
+      2548 Broaddus Maple Court, Madisonville KY 4783.
     </p>
     <p className="flex items-center gap-2 text-sm">
-      <FaWhatsapp className="text-green-400" style={{ fontSize: "20px" }} /> +00
+      <FaWhatsapp className="text-green-400" style={{ fontSize: "20px" }} /> +91
       9876543210
     </p>
     <p className="flex items-center gap-2 text-sm">
@@ -214,7 +214,14 @@ const ContactDetails = () => (
         <FaTwitter />
       </div>
       <div className="w-10 h-10 flex items-center justify-center bg-gray-600 text-white rounded-lg cursor-pointer hover:bg-blue-600 hover:text-white">
-        <FaLinkedinIn />
+      <a
+      href="https://www.linkedin.com/in/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="w-10 h-10 flex items-center justify-center bg-gray-600 text-white rounded-lg cursor-pointer hover:bg-blue-600 hover:text-white"
+    > 
+      <FaLinkedinIn  />
+    </a>
       </div>
       <div className="w-10 h-10 flex items-center justify-center bg-gray-600 text-white rounded-lg cursor-pointer hover:bg-pink-500 hover:text-white">
         <FaInstagram />

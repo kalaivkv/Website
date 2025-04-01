@@ -61,8 +61,8 @@ const Header3 = ({ selectedColor,theme }) => {
 
           <Col xs={8} md={3} className="text-center text-md-start mb-2 mb-md-0">
             <img
-              src="https://grabit-react-next.maraviyainfotech.com/assets/img/logo/logo.png"
-              alt="Grabit Logo"
+              src="https://www.taizo.in/assets/img/New%20header-logo.svg"
+              alt="Logo"
               style={{ height: "40px" }}
             />
           </Col>
